@@ -3,10 +3,8 @@ import random
 def roll_dice(tier):
     """
     Rolls a pool of dice based on the tier and interprets the result for clock advancement.
-
     Args:
         tier: The tier of the faction (integer between 0 and 6).
-
     Returns:
         An integer representing the amount the clock should tick forward (0, 1, 2, or 3).
     """

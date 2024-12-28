@@ -6,7 +6,7 @@ def run_advancement(factions):
 
 class Campaign:
 
-    def __init__(self, crew, faction,
+    def __init__(self, crew, faction_list,
                  time, roll, event):
         """
         This is used to define the current campaign.
