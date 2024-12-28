@@ -1,5 +1,21 @@
----
-- <Faction>:
+- faction:
+  name:
+  tier:
+  description:
+  - turf:
+  - npcs:
+  - notable_assets:
+  - quirks:
+  - allies:
+  - enemies:
+  situation:
+  - clocks:
+      - name:
+          description:
+          progress:
+          complete:
+- faction:
+  name:
   tier:
   description:
   - turf:
