@@ -1,90 +1,30 @@
 import yaml
+import shutil
 from tkinter import *
 
-def run_advancement(factions):
-    return
-
-class Campaign:
-
-    def __init__(self, crew, faction_list,
-                 time, roll, event):
-        """
-        This is used to define the current campaign.
-        Args:
-            - Crew
-            - Factions
-            - Time in weeks
-            - Roller Results
-            - Event prompts(AI powered)
-        """
-
-class Faction:
-
-    def __init__(self, name, tier, description,
-                 turf, npcs, notable_assets,
-                 quirks, allies, enemies,
-                 situation, clocks):
-        """
-        The faction class will take in information from
-        the setting YAML.
-        Args:
-            - A lot lol
-        """
-        self.name = name
-        self.tier = tier
-        self.description = description
-        self.turf = turf
-        self.npcs = npcs
-        self.noteable = notable_assets
-        self.quirks = quirks
-        self. allies = allies
-        self.enemies = enemies
-        self.situation = situation
-        self.clocks = clocks
-
-class Game:
-
-    def __init__(self):
-        """
-        This class defines the current instance of the game.
-        Args:
-
-        """
-
-    def load_faction_stats(self, faction_list, faction_entry):
-        """
-        Accepts an entry from the selected Factions YAML
-        and loads it into a dictionary.
-        Args:
-        - Faction_name: the YAML entry for the faction
-        """
-        with open(faction_list, 'r') as f:
-            factions = yaml.safe_load(f)
-            for faction in factions:
-                if faction_entry in faction:
-                    return faction[faction_entry]
-        return None
-
-    def create_faction_object(self, faction_list):
-        """
-        Takes the dictionary returned from load_faction_stats
-        and creates a Faction object for that Game instance.
-        Args:
-        - faction_stats: dict created by load_faction_stats
-        """
-        for factions in faction_list:
-            # load each faction entry as a dictionary
-            # parses it to a new Faction object called
-            # name = Faction(self, name = name
-
-    def create_all_factions(self, faction_list):
-        for factions in faction_list:
-            self.create_faction_object()
-
-
 # This function is used to start a new Campaign
-def new_campaign():
-    return
+def new_campaign(setting, campaign_name):
+    """
+    This function creates a new campaign from the given setting
+    Args:
+        - setting
+        - campaign_name
+    """
+    # Loads the variables passed to this function as the filepaths
+    save_file_info = './save_files/example.yaml'
+    base_faction_list = './default_factions/' + setting + '.yaml'
+    save_file = './save_files/' + campaign_name + '.yaml'
+
+    # Algorithm needed to append campaign_name to
+    # 'campaign' and a datestamp to 'date' as
+    # well as create new filepath for the save
+    # possibly add save number to this?
+
+    # Copies the content into a NEW save
+    shutil.copyfile(save_file_info, save_file)
+        with open(save_file, 'a') as save, open(base_faction_list, 'r') as base:
+        save.write('\n')
+        save.write(base.read())
 
 # This function is use to load a Campaign
 def load_campaign():
@@ -104,6 +44,25 @@ def load_campaign_dialog():
     button and accesses the appropriate YAML file
     campaign data
     """
+    return
+
+def load_faction_stats(campaign):
+    """
+    Accepts an entry from the selected Factions YAML
+    and loads it into a dictionary from the Class
+    Factions.
+    Args:
+    - campaign: the name of the loaded campaign
+    - faction_list: the YAML entry for the factions
+    """
+    save = ('./save_files/' + campaign + ".yaml")
+    with open(save, 'r') as s:
+        save_file = yaml.safe_load(s)
+        faction_list = save_file['save']['filepath']
+    with open(faction_list, 'r') as f:
+        factions = yaml.safe_load(f)
+
+def run_advancement(factions):
     return
 
 # This function will be used to access program settings

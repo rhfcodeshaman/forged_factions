@@ -1,32 +1,17 @@
-- faction:
-  name:
-  tier:
-  description:
-  - turf:
-  - npcs:
-  - notable_assets:
-  - quirks:
-  - allies:
-  - enemies:
-  situation:
-  - clocks:
-      - name:
-          description:
-          progress:
-          complete:
-- faction:
-  name:
-  tier:
-  description:
-  - turf:
-  - npcs:
-  - notable_assets:
-  - quirks:
-  - allies:
-  - enemies:
-  situation:
-  - clocks:
-      - name:
-          description:
-          progress:
-          complete:
+factions:
+    fac_2:
+      name: "Test Fac_2"
+      tier: 4
+      description:
+        turf:
+        npcs:
+        notable_assets:
+        quirks:
+        allies:
+        enemies:
+      situation:
+        clocks:
+            name:
+              description:
+              progress:
+              complete:
