@@ -1,7 +1,9 @@
 factions:
-    fac_2:
-      name: "Test Fac_2"
-      tier: 4
+    <faction>:
+      category:
+      name:
+      tier:
+      hold:
       description:
         turf:
         npcs:
@@ -11,7 +13,7 @@ factions:
         enemies:
       situation:
         clocks:
-            name:
+            <clock_name>:
               description:
-              progress:
+              progress: 0
               complete:

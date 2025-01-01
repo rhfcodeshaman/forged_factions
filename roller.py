@@ -19,18 +19,16 @@ def roll_dice(tier):
     for dice in range(dice_pool):
         dice_roll = random.randrange(1, 7)
         results.append(dice_roll)
-    print(results)
     critical_success = (results.count(6) == 2)
+    critical_failure = (results.count(1) == 2)
 
     if critical_success == True:
         return 3
-        print("A critical success! :)")
+    elif critical_failure == True:
+        return 0
     elif max(results) == 6:
         return 2
-        print("A success!")
     elif max(results) >= 4:
         return 1
-        print("A partial success...")
     elif max(results) <= 3:
-        print("A failure... :'(")
         return 0
