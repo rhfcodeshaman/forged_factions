@@ -6,9 +6,9 @@ This is the very bare bones list of my plans
 
 ## Core App Features
 The app will be useable when I have completed:
-- [ ] The Dice Roller
+- [x] The Dice Roller
 - [ ] Ability to Create/Save/Load campaigns
-- [ ] Ability to read Faction lists stored as YAML files
+- [x] Ability to read Faction lists stored as YAML files
 - [ ] Create/Edit those Faction lists
 - [ ] Run Advancement and update the save files for your campaign
 - [ ] GUI isn't hot trash
