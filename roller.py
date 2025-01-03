@@ -25,7 +25,7 @@ def roll_dice(tier):
     if critical_success == True:
         return 3
     elif critical_failure == True:
-        return 0
+        return -1
     elif max(results) == 6:
         return 2
     elif max(results) >= 4:

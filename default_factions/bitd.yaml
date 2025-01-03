@@ -5,1059 +5,1059 @@ factions:
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_hive:
     category: Underworld
     name: The Hive
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_circle_of_flame:
     category: Underworld
     name: The Circle of Flame
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_silver_nails:
     category: Underworld
     name: The Silver Nails
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   lord_scurlock:
     category: Underworld
     name: Lord Scurlock
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_crows:
     category: Underworld
     name: The Crows
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_lampblacks:
     category: Underworld
     name: The Lampblacks
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_red_sashes:
     category: Underworld
     name: The Red Sashes
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_dimmer_sisters:
     category: Underworld
     name: The Dimmer Sisters
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_grinders:
     category: Underworld
     name: The Grinders
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_billhooks:
     category: Underworld
     name: The Billhooks
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_wraiths:
     category: Underworld
     name: The Wraiths
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_gray_cloaks:
     category: Underworld
     name: The Gray Cloaks
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   ulf_ironborn:
     category: Underworld
     name: Ulf Ironborn
     tier: 1
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_fog_hounds:
     category: Underworld
     name: The Fog Hounds
     tier: 1
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_lost:
     category: Underworld
     name: The Lost
     tier: 1
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   imperial_military:
     category: Institutions
     name: Imperial Military
     tier: 6
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   city_council:
     category: Institutions
     name: City Council
     tier: 5
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   ministry_of_preservation:
     category: Institutions
     name: Ministry of Preservation
     tier: 5
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   leviathan_hunters:
     category: Institutions
     name: Leviathan Hunters
     tier: 5
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   ironhook_prison:
     category: Institutions
     name: Ironhook Prison
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_sparkwrights:
     category: Institutions
     name: The Sparkwrights
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_inspectors:
     category: Institutions
     name: The Inspectors
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_bluecoats:
     category: Institutions
     name: The Bluecoats
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
     iruvian_consulate:
       category: Institutions
       name: "Iruvian Consulate"
       tier: 3
       hold: Weak
       description:
-        turf:
-        npcs:
-        notable_assets:
-        quirks:
-        allies:
-        enemies:
+      turf:
+      npcs:
+      notable_assets:
+      quirks:
+      allies:
+      enemies:
       situation:
-        clocks:
-            clock_name:
-              description:
-              progress: 0
-              complete:
+      clocks:
+          clock_name:
+            description:
+            progress: 0
+            complete:
     skovlan_consulate:
       category: Institutions
       name: "Skovlan Consulate"
       tier: 3
       hold: Weak
       description:
-        turf:
-        npcs:
-        notable_assets:
-        quirks:
-        allies:
-        enemies:
+      turf:
+      npcs:
+      notable_assets:
+      quirks:
+      allies:
+      enemies:
       situation:
-        clocks:
-            clock_name:
-              description:
-              progress: 0
-              complete:
+      clocks:
+          clock_name:
+            description:
+            progress: 0
+            complete:
     the_brigade:
       category: Institutions
       name: "The Brigade"
       tier: 2
       hold: Strong
       description:
-        turf:
-        npcs:
-        notable_assets:
-        quirks:
-        allies:
-        enemies:
+      turf:
+      npcs:
+      notable_assets:
+      quirks:
+      allies:
+      enemies:
       situation:
-        clocks:
-            clock_name:
-              description:
-              progress: 0
-              complete:
+      clocks:
+          clock_name:
+            description:
+            progress: 0
+            complete:
     servosi_consulate:
       category: Institutions
       name: "Servosi Consulate"
       tier: 1
       hold: Strong
       description:
-        turf:
-        npcs:
-        notable_assets:
-        quirks:
-        allies:
-        enemies:
+      turf:
+      npcs:
+      notable_assets:
+      quirks:
+      allies:
+      enemies:
       situation:
-        clocks:
-            clock_name:
-              description:
-              progress: 0
-              complete:
+      clocks:
+          clock_name:
+            description:
+            progress: 0
+            complete:
     dagger_isles_consulate:
       category: Institutions
       name: "Dagger Isles Consulate"
       tier: 1
       hold: Strong
       description:
-        turf:
-        npcs:
-        notable_assets:
-        quirks:
-        allies:
-        enemies:
-      situation:
-        clocks:
-            clock_name:
-              description:
-              progress: 0
-              complete:
+      turf:
+      npcs:
+      notable_assets:
+      quirks:
+      allies:
+      enemies:
+      situa`tion:
+      clocks:
+          clock_name:
+            description:
+            progress: 0
+            complete:
   dockers:
     category: Labor & Trade
     name: Dockers
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   gondoliers:
     category: Labor & Trade
     name: Gondoliers
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   sailors:
     category: Labor & Trade
     name: Sailors
     tier: 3
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   laborers:
     category: Labor & Trade
     name: Laborers
     tier: 3
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   cabbies:
     category: Labor & Trade
     name: Cabbies
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   cyphers:
     category: Labor & Trade
     name: Cyphers
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   ink_rakes:
     category: Labor & Trade
     name: Ink Rakes
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   rail_jacks:
     category: Labor & Trade
     name: Rail Jacks
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   servants:
     category: Labor & Trade
     name: Servants
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_foundation:
     category: Labor & Trade
     name: The Foundation
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   whitecrown:
     category: Citizenry
     name: Whitecrown
     tier: 5
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   brightstone:
     category: Citizenry
     name: Brightstone
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   charterhall:
     category: Citizenry
     name: Charterhall
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   six_towers:
     category: Citizenry
     name: Six Towers
     tier: 3
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   silkshore:
     category: Citizenry
     name: Silkshore
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   nightmarket:
     category: Citizenry
     name: Nightmarket
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   crows_foot:
     category: Citizenry
     name: Crow's Foot
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_docks:
     category: Citizenry
     name: The Docks
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   barrowcleft:
     category: Citizenry
     name: Barrowcleft
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   coalridge:
     category: Citizenry
     name: Coalridge
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   charhollow:
     category: Citizenry
     name: Charhollow
     tier: 1
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   dunslough:
     category: Citizenry
     name: Dunslough
     tier: 1
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_church_of_ecstasy:
     category: The Fringe
     name: The Church of Ecstasy
     tier: 4
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_horde:
     category: The Fringe
     name: The Horde
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_path_of_echoes:
     category: The Fringe
     name: The Path of Echoes
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_forgotten_gods:
     category: The Fringe
     name: The Forgotten Gods
     tier: 3
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_reconciled:
     category: The Fringe
     name: The Reconciled
     tier: 3
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   skovlander_refugees:
     category: The Fringe
     name: Skovlander Refugees
     tier: 3
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   the_weeping_lady:
     category: The Fringe
     name: The Weeping Lady
     tier: 2
     hold: Strong
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:
   deathlands_scavengers:
     category: The Fringe
     name: Deathlands Scavengers
     tier: 2
     hold: Weak
     description:
-      turf:
-      npcs:
-      notable_assets:
-      quirks:
-      allies:
-      enemies:
+    turf:
+    npcs:
+    notable_assets:
+    quirks:
+    allies:
+    enemies:
     situation:
-      clocks:
-        clock_name:
-          description:
-          progress: 0
-          complete:
+    clocks:
+      clock_name:
+        description:
+        progress: 0
+        complete:

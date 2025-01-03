@@ -1,19 +1,19 @@
-factions:
+<setting>:
     <faction>:
       category:
       name:
       tier:
       hold:
       description:
-        turf:
-        npcs:
-        notable_assets:
-        quirks:
-        allies:
-        enemies:
+      turf:
+      npcs:
+      notable_assets:
+      quirks:
+      allies:
+      enemies:
       situation:
-        clocks:
-            <clock_name>:
-              description:
-              progress: 0
-              complete:
+      clocks:
+          <clock_name>:
+            description:
+            progress: 0
+            complete:
