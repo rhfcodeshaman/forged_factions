@@ -1,9 +1,7 @@
 import yaml
-import shutil
-import os
-from datetime import date
+import datetime
 from tkinter import *
-import roller.py
+import roller
 
 
 def create_new_faction_list(list_name):
@@ -16,29 +14,44 @@ def create_new_faction_list(list_name):
     filepath = (f'./custom_factions/{list_name}.yaml')
     setting_name = list_name.replace(' ', '_').lower()
     with open(filepath, 'w') as f:
-        setting_dict = {setting_name: }
-        f.write(yaml.dump(setting_dict))
+        setting_dict = {setting_name: ""}
+        f.write(yaml.dump(setting_dict, sort_keys=False))
         return
 
-def create_new_faction(filepath, setting_name, faction, category,
-                       name, tier, hold,
-                       description, turf, npcs,
+def create_new_faction(filepath, faction, name,
+                       category, tier, hold,
+                       fac_description, turf, npcs,
                        notable_assets, quirks, allies,
                        enemies, situation, clocks,
-                       clock_name, description, progress, complete):
-    # template_file = ('./default_factions/faction_template.yaml')
-    # converted_name = name.replace(' ', '_').lower()
-    # with open(custom_faction_list, 'w') as c, open(template_file, 'r') as f:
-    #     template = yaml.safe_load(f)
-    #     key.replace
+                       clock_name, clock_description, progress, complete):
+    """
+    This function adds to a new faction to any selected faction list. It
+    intakes the filepath variable to select the list, and then appends all
+    faction variables to the list in YAML format.
+    TODO:
+        - [ ] Add error handling if a base faction list is selected somehow
+    """
     new_faction = {
-        faction: {"category": category, "name": name, "tier": tier, "hold": hold,
-    "description": description, "turf": turf, "npcs": npcs, "notable_assets": notable_assets,
+        faction: {"name": name, "category": category, "tier": tier, "hold": hold,
+    "description": fac_description, "turf": turf, "npcs": npcs, "notable_assets": notable_assets,
     "quirks": quirks, "allies": allies, "enemies": enemies, "situation": situation,
-    "clocks": {clock_name": clock_name, "description": description, "progress": progress,
+    "clocks": {"clock_name": clock_name, "description": clock_description, "progress": progress,
     "complete": complete}}
     }
-    with open(filepath, 'w') as custom:
+
+    with open(filepath, 'a') as custom:
+        yaml.dump(new_faction, custom, sort_keys=False)
+    return
+
+def edit_faction(list_name, faction_name):
+    """
+    This function edits a faction in an existing faction list.
+    NOTE: This may have to be edited as the GUI develops into
+    two separate functions.
+    Args:
+        - list_name: the faction list to be edited
+        - faction_name: the faction to be edited
+    """
     return
 
 # This function is used to start a new Campaign
@@ -49,12 +62,12 @@ def new_campaign(setting, campaign_name):
         - setting
         - campaign_name
     TODO:
-        - Add a downtime tracker to the save file YAML
+        - [ ] Add a downtime tracker to the save file YAML
     """
     # Loads the variables passed to this function as the filepaths
     save_file_template = 'save_files/save_template.yaml'
     base_faction_list = './default_factions/' + setting + '.yaml'
-    save_file = './save_files/' + campaign_name + '.yaml'
+    save_file = './save_files/' + campaign_name + '_1.yaml'
 
     """
     1. Open template save file
@@ -64,12 +77,14 @@ def new_campaign(setting, campaign_name):
     """
     with open(save_file_template, 'r') as stream:
         save_info = yaml.safe_load(stream)
+        save_number = 1
         save_date = datetime.now()
         save_name = campaign_name
+        save_info["save"]["save_number"] = save_number
         save_info["save"]["campaign"] = save_name
         save_info["save"]["date"] = save_date.strftime("%Y-%m-%d %H:%M:%S")
         with open(save_file, 'w') as save:
-            yaml.safe_dump(save_info, save)
+            yaml.safe_dump(save_info, save, sort_keys=False)
 
     # Copies the content into a NEW save
     with open(save_file, 'a') as save, open(base_faction_list, 'r') as base:
@@ -92,25 +107,6 @@ def load_campaign(campaign_name):
         current_game = yaml.safe_load(file)
         return current_game
 
-def edit_faction():
-    return
-
-def create_campaign_dialog():
-    """
-    This function is called by the Create Campaign
-    button and creates a new YAML file with entered
-    campaign data
-    """
-    return
-
-def load_campaign_dialog():
-    """
-    This function is called by the Load Campaign
-    button and accesses the appropriate YAML file
-    campaign data
-    """
-    return
-
 def run_advancement(current_game):
     """
     Uses the current_game dictionary in combination with
@@ -122,14 +118,15 @@ def run_advancement(current_game):
         3. Place the results of roller.py into the progress value
         4. AND create a new save file or update the save file
     3. Return the advancement values of each faction
+    4. Mark downtime
     Args
         - current_game: generated by calling the load_campaign function
     Returns:
         - Faction advancement results which are then appended as an integer value
         to ["factions"]["<faction_name>"]["clocks"]["<clock_name>"]["progress"] key
     TODO:
-        - Add an algorithm to mark downtime after advancement has been run
-        - Have this function call the story_generator.py script to generate
+        - [ ] Add an algorithm to mark downtime after advancement has been run
+        - [ ] Have this function call the story_generator.py script to generate
         progress prompts via ChatGPT
     """
     # 1: Load current_game into a variable
@@ -144,7 +141,7 @@ def run_advancement(current_game):
         advancement_result = roller.roll_dice(current_faction_tier)
 
         # 2.3: place advancement_result into current_game under "progress" key
-        faction_list["factions"][current_faction_name]["clocks"]["clock_name"]["progress"] += advancement_result
+        current_game["factions"][current_faction_name]["clocks"]["clock_name"]["progress"] += advancement_result
 
         # 2.4: update current save or create new one
         # This portion of the function will be built dependent
@@ -152,6 +149,9 @@ def run_advancement(current_game):
 
         # 3: return the advancement result
         return advancement_result
+
+    # 4: Mark downtime
+    current_game["downtime"] += 1
 
 def manual_advancement(faction, clock, advancement, current_game):
     """
@@ -173,23 +173,87 @@ def save_campaign(current_game):
     timestamp, and save number.
     Args:
         - current_game: generated by calling the load_campaign function
+        - campaign_name: name of the current campaign
+        - filepath: filepath to save
+    1. Open new save file and look at current_game variable
+    2. Compare save number
+    3. Create a new save file
+    4. Place metadeta into save file
+    5. Dump current_game faction states into save file
+    6. Save the file
     """
+    new_save_info = current_game
+    save_date = datetime.now()
+    new_save_info["save"]["save_number"] += 1
+    new_save_info["save"]["date"] = save_date.strftime("%Y-%m-%d %H:%M:%S")
+    new_save_filepath = f'./save_files/{new_save_info["save"]["campaign"]}_{new_save_info["save"]["save_number"]}.yaml'
+    with open(new_save_filepath, 'w') as save:
+        save.write(yaml.dump(new_save_info, sort_keys=False))
     return
 
 # This function will be used to access program settings
 def settings():
     return
 
-def export():
+def export_faction_list():
     return
 
-def import()
+def import_faction_list():
+    return
+
+def default_setting_dialog():
+    def yes_action():
+        dialog.destroy()
+        create_custom_campaign_dialog()
+
+    def no_action():
+        dialog.destroy()
+        create_campaign_dialog()
+
+    dialog = Toplevel(root)
+    dialog.title("Campaign Setting")
+    dialog.geometry("200x100")
+
+    Label(dialog, text="Do you want to use a custom setting?").pack(pady=10)
+
+    yes_button = Button(dialog, text="Yes", command=yes_action)
+    yes_button.pack(side="left",pady=10, padx=10)
+    no_button = Button(dialog, text="No", command=no_action)
+    no_button.pack(side="right",pady=10, padx=10)
+
+def create_campaign_dialog():
+    """
+    This function is called by the New Campaign
+    button and creates a new YAML file with entered
+    campaign data
+    """
+    dialog = Toplevel(root)
+    dialog.title("Create New Campaign")
+    dialog.geometry("200x200")
+
+    Label(dialog, text="Setting:").pack()
+    setting_entry = Entry(dialog)
+    setting_entry.pack()
+
+    Label(dialog, text="Campaign Name:").pack()
+    campaign_entry = Entry(dialog)
+    campaign_entry.pack()
+
+def create_custom_campaign_dialog():
+    return
+
+def load_campaign_dialog():
+    """
+    This function is called by the Load Campaign
+    button and accesses the appropriate YAML file
+    campaign data
+    """
     return
 
 """
 The below code initializes the main window 
 of the app using tkinter and initializes
-an instance of Game.
+an instance of the game.
 """
 root = Tk()
 root.title("Forged Factions")
@@ -200,7 +264,7 @@ left_frame = Frame(root)
 left_frame.pack(side="left", fill="y")
 
 # New Campaign Button
-new_campaign_button = Button(left_frame, text="New Campaign", command=new_campaign)
+new_campaign_button = Button(left_frame, text="New Campaign", command=default_setting_dialog)
 new_campaign_button.pack(pady=5)
 
 # Load Campaign Button
@@ -227,11 +291,11 @@ run_advancement_button = Button(right_frame, text="Run Advancement", command=run
 run_advancement_button.pack(pady=5)
 
 # Create New Faction Button
-# create_new_faction_button = Button(right_frame, text="Create New Faction", command=create_new_faction)
-# create_new_faction_button.pack(pady=5)
-#
-# # Edit Faction Button
-# edit_faction_button = Button(right_frame, text="Edit Faction", command=edit_faction)
-# edit_faction_button.pack(pady=5)
+create_new_faction_button = Button(right_frame, text="Create New Faction", command=create_new_faction)
+create_new_faction_button.pack(pady=5)
+
+# Edit Faction Button
+edit_faction_button = Button(right_frame, text="Edit Faction", command=edit_faction)
+edit_faction_button.pack(pady=5)
 
 root.mainloop()
