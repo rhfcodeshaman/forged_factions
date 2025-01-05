@@ -1,3 +1,6 @@
+---
+downtime = 0
+setting_name = "Blades In the Dark"
 factions:
   the_unseen:
     category: Underworld

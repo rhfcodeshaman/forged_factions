@@ -1,5 +1,7 @@
+---
 downtime: 0
-<setting>:
+setting_name: ""
+factions:
     <faction>:
       category:
       name:

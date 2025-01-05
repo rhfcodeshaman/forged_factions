@@ -1,7 +1,8 @@
 import yaml
-import datetime
 from tkinter import *
 import roller
+import os
+from datetime import *
 
 
 def create_new_faction_list(list_name):
@@ -54,6 +55,14 @@ def edit_faction(list_name, faction_name):
     """
     return
 
+def create_setting(setting_name):
+    """
+    This function is called by the create_setting_dialog function
+    and the create_setting main window option to allow
+    the GM to create a custom setting for a new campaign
+    """
+    return
+
 # This function is used to start a new Campaign
 def new_campaign(setting, campaign_name):
     """
@@ -61,8 +70,6 @@ def new_campaign(setting, campaign_name):
     Args:
         - setting
         - campaign_name
-    TODO:
-        - [ ] Add a downtime tracker to the save file YAML
     """
     # Loads the variables passed to this function as the filepaths
     save_file_template = 'save_files/save_template.yaml'
@@ -201,6 +208,9 @@ def export_faction_list():
 def import_faction_list():
     return
 
+def start_campaign():
+    return
+
 def default_setting_dialog():
     def yes_action():
         dialog.destroy()
@@ -231,15 +241,68 @@ def create_campaign_dialog():
     dialog.title("Create New Campaign")
     dialog.geometry("200x200")
 
+    Label(dialog, text="Campaign Name:").pack()
+    campaign_entry = Entry(dialog)
+    campaign_entry.pack()
+
     Label(dialog, text="Setting:").pack()
-    setting_entry = Entry(dialog)
+    setting_options = ["Blades in the Dark", "Scum & Villainy"]
+    clicked = StringVar()
+    clicked.set("Blades in the Dark")
+    setting_entry = OptionMenu(dialog, clicked, *setting_options)
     setting_entry.pack()
+
+    # more complex lambda
+    if clicked.get() == "Blades in the Dark":
+        campaign_setting = "blades_in_the_dark"
+    elif clicked.get() == "Scum & Villainy":
+        campaign_setting = "scum_and_villainy"
+    ok_button = Button(dialog, text="Ok", command=lambda: new_campaign(campaign_setting,campaign_entry.get()))
+    ok_button.pack(pady=10)
+
+def create_custom_campaign_dialog():
+    """
+    This function is used to create a new custom campaign.
+
+    TODO:
+      - [ ]  Pass campaign_entry to new_campaign
+      - [ ]  Pass setting_entry to new_campaign
+    """
+    dialog = Toplevel(root)
+    dialog.title("Create Custom Campaign")
+    dialog.geometry("200x200")
 
     Label(dialog, text="Campaign Name:").pack()
     campaign_entry = Entry(dialog)
     campaign_entry.pack()
 
-def create_custom_campaign_dialog():
+    Label(dialog, text="Setting Name:").pack()
+    setting_entry = Entry(dialog)
+    setting_entry.pack()
+
+    """
+    1. Call create_new_faction_list to make a new yaml in ./custom_factions/
+    2. Call create_setting_dialog to edit that new yaml
+    3. Save the empty faction list as a save file
+    4. create_setting function saves over that when called by create_setting_dialog
+    """
+    ok_button = Button(dialog, text="Ok",command=lambda: create_new_faction_list(setting_entry.get(),campaign_entry.get()))
+    ok_button.pack(pady=10)
+
+def create_setting_dialog():
+    """
+    This function is called by create_custom_campaign_dialog after it
+    calls create_new_faction_list to make a new yaml in ./custom_factions/
+    This function will open up a series of input boxes that will be used to parse strings
+    to create_new_faction which will in turn parse to the save file in ./custom_factions/.
+
+    When this dialog has run its course, it will parse the entirety of that custom faction
+    list to the save created by 'create_custom_campaign_dialog' and call the start_campaign function.
+    """
+    dialog = Toplevel(root)
+    dialog.title("Create Setting")
+    dialog.geometry("200x400")
+
     return
 
 def load_campaign_dialog():
@@ -247,8 +310,31 @@ def load_campaign_dialog():
     This function is called by the Load Campaign
     button and accesses the appropriate YAML file
     campaign data
+
+    TODO:
+      - [ ]  for loop to acquire campaign names returns 'None' to list. Add error handling to exclude template files
     """
-    return
+    dialog = Toplevel(root)
+    dialog.title("Load Campaign")
+    dialog.geometry("200x200")
+
+    # use os to walk the save_files dir
+    # and PyYaml to grab the "campaign" value
+    saves = []
+    for files in os.listdir("./save_files/"):
+        with open(f"./save_files/{files}", 'r') as f:
+            campaign = yaml.safe_load(f)
+            saves.append(campaign["save"]["campaign"])
+
+    Label(dialog, text="Campaign Name:").pack()
+    saved_campaigns = saves
+    clicked = StringVar()
+    clicked.set(saved_campaigns[0])
+    selected_campaign = OptionMenu(dialog, clicked, *saved_campaigns)
+    selected_campaign.pack()
+
+    button = Button(dialog, text="Load Campaign",command=lambda: load_campaign(clicked.get()))
+    button.pack(pady=10)
 
 """
 The below code initializes the main window 
@@ -268,8 +354,12 @@ new_campaign_button = Button(left_frame, text="New Campaign", command=default_se
 new_campaign_button.pack(pady=5)
 
 # Load Campaign Button
-load_campaign_button = Button(left_frame, text="Load Campaign", command=load_campaign)
+load_campaign_button = Button(left_frame, text="Load Campaign", command=load_campaign_dialog)
 load_campaign_button.pack(pady=5)
+
+# Create Setting Button
+create_setting_button = Button(left_frame, text="Create Setting", command=create_setting_dialog)
+create_setting_button.pack(pady=5)
 
 # Settings Button
 settings_button = Button(left_frame, text="Settings", command=settings)
