@@ -17,7 +17,7 @@ def create_new_faction_list(list_name):
     with open(filepath, 'w') as f:
         setting_dict = {setting_name: ""}
         f.write(yaml.dump(setting_dict, sort_keys=False))
-        return
+    return setting_dict
 
 def create_new_faction(filepath, faction, name,
                        category, tier, hold,
@@ -283,10 +283,11 @@ def create_custom_campaign_dialog():
     3. Save the empty faction list as a save file
     4. create_setting function saves over that when called by create_setting_dialog
     """
-    ok_button = Button(dialog, text="Ok",command=lambda: create_new_faction_list(setting_entry.get(),campaign_entry.get()))
+    ok_button = Button(dialog, text="Ok",command=lambda: (create_setting_dialog(setting_entry.get()), create_new_faction_list(setting_entry.get()), dialog.destroy()))
     ok_button.pack(pady=10)
 
-def create_setting_dialog():
+
+def create_setting_dialog(setting_entry):
     """
     This function is called by create_custom_campaign_dialog after it
     calls create_new_faction_list to make a new yaml in ./custom_factions/
@@ -300,6 +301,22 @@ def create_setting_dialog():
     dialog.title("Create Setting")
     dialog.geometry("200x400")
 
+    Label(dialog, text=f"{setting_entry} faction list:").pack()
+
+    faction_list = Listbox(dialog)
+    faction_scrollbar = Scrollbar(dialog, orient="vertical", command=faction_list.yview)
+    faction_list.config(yscrollcommand=faction_scrollbar.set)
+    faction_scrollbar.pack(side="right", fill="y")
+    faction_list.pack(pady=(0,100),padx=10, fill="both", expand=True)
+
+    add_faction_button = Button(dialog, text="Add Faction",command=lambda: create_new_faction_dialog())
+    add_faction_button.pack(side="left")
+    # edit_faction_button = # Select a faction on the list to press, then call edit_faction_dialog
+    # delete_faction_button = # Select a faction on the list, 'are you sure', delete faction from setting
+    # save_button = # calls save_faction_list, this function needs to be different than save_campaign
+    # start_button = # starts a new campaign with the loaded faction_list
+
+def create_new_faction_dialog():
     return
 
 def load_campaign_dialog():
