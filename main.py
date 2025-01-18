@@ -205,9 +205,6 @@ def export_faction_list():
 def import_faction_list():
     return
 
-def start_campaign():
-    return
-
 def default_setting_dialog():
     def yes_action():
         dialog.destroy()
@@ -234,6 +231,7 @@ def create_campaign_dialog():
     button and creates a new YAML file with entered
     campaign data
     """
+
     dialog = Toplevel(root)
     dialog.title("Create New Campaign")
     dialog.geometry("200x200")
@@ -256,6 +254,7 @@ def create_campaign_dialog():
         campaign_setting = "scum_and_villainy"
     ok_button = Button(dialog, text="Ok", command=lambda: new_campaign(campaign_setting,campaign_entry.get()))
     ok_button.pack(pady=10)
+    # destroy dialog, then push current campaign data to main window center listbox with start_campaign
 
 def create_custom_campaign_dialog():
     """
@@ -299,7 +298,7 @@ def create_setting_dialog(setting_entry):
     """
     dialog = Toplevel(root)
     dialog.title("Create Setting")
-    dialog.geometry("200x400")
+    dialog.geometry("400x400")
 
     Label(dialog, text=f"{setting_entry} faction list:").pack()
 
@@ -310,13 +309,19 @@ def create_setting_dialog(setting_entry):
     faction_list.pack(pady=(0,100),padx=10, fill="both", expand=True)
 
     add_faction_button = Button(dialog, text="Add Faction",command=lambda: create_new_faction_dialog())
-    add_faction_button.pack(side="left")
-    # edit_faction_button = # Select a faction on the list to press, then call edit_faction_dialog
-    # delete_faction_button = # Select a faction on the list, 'are you sure', delete faction from setting
+    add_faction_button.grid(row=0, column=3, padx=10, pady=20)
+    edit_faction_button = Button(dialog, text="Edit Faction", command=lambda: edit_faction_dialog())
+    edit_faction_button.pack.grid(row=0, column=2, padx=10, pady=20)
+    delete_faction_button = Button(dialog, text="Delete Faction")
+    delete_faction_button.grid(row=0, column=1, padx=10, pady=20)
     # save_button = # calls save_faction_list, this function needs to be different than save_campaign
     # start_button = # starts a new campaign with the loaded faction_list
 
 def create_new_faction_dialog():
+    return
+
+def edit_faction_dialog():
+    # Select a faction on the list to press, then call edit_faction_dialog
     return
 
 def load_campaign_dialog():
@@ -349,6 +354,9 @@ def load_campaign_dialog():
 
     button = Button(dialog, text="Load Campaign",command=lambda: load_campaign(clicked.get()))
     button.pack(pady=10)
+
+def start_campaign():
+    return
 
 """
 The below code initializes the main window 
